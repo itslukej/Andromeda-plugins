@@ -12,5 +12,6 @@ def on_pubmsg(irc,conn,event):
         for quiet in irc.state['channels'][chanset['main']]['quiets']:
             if fnmatch(event.source, quiet):
                 irc.privmsg(chanset['ops'], irc.plugins[name]["syntax"].format(event.source, " ".join(event.arguments)))
+                break
     
 add_handler(on_pubmsg, name)
