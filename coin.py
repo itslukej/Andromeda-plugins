@@ -1,7 +1,7 @@
 from utils import add_cmd
 import random
 name = "coin"
-cmds = ["coin", "cat"]
+cmds = ["coin", "cat", "dog"]
 
 def flipper(irc,event,args):
     irc.reply(event, "{0} flips a coin..".format(event.source.nick))
